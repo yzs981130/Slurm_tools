@@ -671,7 +671,7 @@ BEGIN {
 		printf("%-*s %15s ", hostnamelength, node, partition)
 		printf("%s%7s%1s%s ", statecolor, state, stateflag, NORMAL)
 		printf("%s%3d%s %3d ", cpucolor, allocated_cores, NORMAL, total_cores)
-		printf("%s%s%s %s ", grescolor, nodeusedgres_, NORMAL, nodegres_)
+		if (printgres == 1) printf("%s%s%s %s ", grescolor, nodeusedgres_, NORMAL, nodegres_)
 		printf("%s%7.2f%1s%s ", loadcolor, cpuload, loadflag, NORMAL)
 		printf("%s%8d %s%8d%1s%s ", memcolor, memory, freememcolor, freemem, memflag, NORMAL)
 		if (printgres == 1) printf("%*-s ", nodegreswidth, nodegres)
